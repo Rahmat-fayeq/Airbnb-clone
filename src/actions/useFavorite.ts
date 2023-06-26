@@ -30,11 +30,21 @@ function useFavorite({ listingId, currentUser }: IUseFavorite) {
       try {
         if (hasFavorited) {
           await axios.delete(
-            `https://airbnb-clone-example-murex.vercel.app/src/app/api/favorites/${listingId}`
+            `https://airbnb-clone-example-murex.vercel.app/src/app/api/favorites/${listingId}`,
+            {
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+            }
           );
         } else {
           await axios.post(
-            `https://airbnb-clone-example-murex.vercel.app/src/app/api/favorites/${listingId}`
+            `https://airbnb-clone-example-murex.vercel.app/src/app/api/favorites/${listingId}`,
+            {
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+            }
           );
         }
         toast.success("Sucess");
