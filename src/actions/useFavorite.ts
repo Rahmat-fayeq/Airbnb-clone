@@ -30,10 +30,12 @@ function useFavorite({ listingId, currentUser }: IUseFavorite) {
       try {
         if (hasFavorited) {
           await axios.delete(
-            `http://localhost:3000/api/favorites/${listingId}`
+            `https://airbnb-clone-example-murex.vercel.app/${listingId}`
           );
         } else {
-          await axios.post(`http://localhost:3000/api/favorites/${listingId}`);
+          await axios.post(
+            `https://airbnb-clone-example-murex.vercel.app/${listingId}`
+          );
         }
         toast.success("Sucess");
         router.refresh();
