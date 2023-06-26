@@ -21,7 +21,7 @@
     "bcrypt": "^5.1.0",
     "date-fns": "^2.30.0",
     "leaflet": "^1.9.4",
-    "next": "^13.4.8-canary.2",
+    "next": "^13.4.5",
     "next-auth": "^4.22.1",
     "next-cloudinary": "^4.12.0",
     "postcss": "8.4.24",
